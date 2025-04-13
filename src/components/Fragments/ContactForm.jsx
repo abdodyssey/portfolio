@@ -96,28 +96,28 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-1/4">
       <InputForm
         type="text"
-        name="name"
-        placeholder="Nama"
+        name="Fullname"
+        placeholder="Pendek juga boleh.."
         value={form.name}
         onChange={handleChange}
       />
       <InputForm
         type="text"
-        name="username"
-        placeholder="Username"
+        name="Instagram Username"
+        placeholder="Serah lu"
         value={form.username}
         onChange={handleChange}
       />
       <TextAreaForm
-        name="message"
-        placeholder="Pesan"
+        name="Message"
+        placeholder="Kata-kata hari ini ..."
         value={form.message}
         onChange={handleChange}
       ></TextAreaForm>
-      <Button type="submit">Kirim ke WhatsApp</Button>
+      <Button type="submit" className='w-full'>Submit sini bro</Button>
     </form>
   );
 };

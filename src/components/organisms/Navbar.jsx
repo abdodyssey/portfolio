@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center py-2 px-4 text-neutral-950 w-full relative">
-      <h1 className="text-sm md:text-xl font-bold hover:scale-103 transition duration-200">
+    <nav className="flex justify-between items-center py-2 px-4 text-neutral-950 w-full relative ">
+      <h1 className="text-3xl md:text-xl font-bold hover:scale-103 transition duration-200">
         <Link to="/">abd.ezpz</Link>
       </h1>
-      <div className="md:hidden" onClick={() => setIsOpen(true)}>
+      <div className="md:hidden text-4xl" onClick={() => setIsOpen(true)}>
         <FontAwesomeIcon icon={faGripLines} />
       </div>
       {isOpen && (
@@ -20,13 +20,13 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           } `}
         >
-          <div onClick={() => setIsOpen(false)}>
+          <div onClick={() => setIsOpen(false)} className="text-4xl absolute right-0 px-4 py-2">
             <FontAwesomeIcon
               icon={faGripLines}
-              className="absolute right-0 p-3"
+              className=""
             />
           </div>
-          <ul className="text-sm flex flex-col p-4 gap-4 top-9 absolute ">
+          <ul className="text-2xl flex flex-col p-4 gap-4 top-9 absolute w-full">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -42,7 +42,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-      
+
       <ul className="md:flex gap-4 text-sm hover:cursor-pointer hidden">
         <li className="hover:scale-103 transition duration-200">
           <Link to="/">Home</Link>
