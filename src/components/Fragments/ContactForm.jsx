@@ -19,7 +19,7 @@ const ContactForm = () => {
 
   const handleSubmit = () => {
 
-    const phoneNumber = "085136117973";
+    const phoneNumber = "+6285136117973";
     const { name, username, message } = form;
 
     const messages = `${name} ${username} ${message}`;
