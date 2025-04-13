@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import Button from "../Elements/Button";
-import { useState } from "react";
-import ContactForm from "../Fragments/ContactForm";
+
 
 const Hero = () => {
-  const [guestName, setGuestName] = useState("");
-  const handleChange = (e) => {
-    setGuestName(e.target.value)
-  }
+
   return (
     <div
       className="h-[calc(100vh-45px)] flex flex-col justify-center items-center
@@ -30,15 +26,6 @@ const Hero = () => {
         <Link to="/projects">Liat Project gue</Link>
       </Button>
 
-      <div className="absolute bottom-0 z-20 p-2 left-0">
-        <input
-          type="text"
-          value={guestName}
-          placeholder="Silakan ketik nama anda..."
-          className="border py-2 px-4 text-xs rounded mr-2"
-          onChange={handleChange}
-        />
-      </div>
     </div>
   );
 };

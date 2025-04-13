@@ -19,11 +19,11 @@ const ContactForm = () => {
 
   const handleSubmit = () => {
 
-    const phoneNumber = "085788141307";
+    const phoneNumber = "085136117973";
     const { name, username, message } = form;
 
-    const allmessage = `${name} ${username} ${message}`;
-    const encodedMessage = encodeURIComponent(allmessage);
+    const messages = `${name} ${username} ${message}`;
+    const encodedMessage = encodeURIComponent(messages);
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(url, "_blank");
   };
