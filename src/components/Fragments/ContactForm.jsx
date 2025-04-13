@@ -22,7 +22,7 @@ const ContactForm = () => {
     const phoneNumber = "6285156117973";
     const { name, username, message } = form;
 
-    const messages = `${name}. ${username}. ${message}`;
+    const messages = `Nama:${name}\n Username:${username}\n Pesan:${message}`;
     const encodedMessage = encodeURIComponent(messages);
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(url, "_blank");
