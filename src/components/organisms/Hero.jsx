@@ -23,7 +23,7 @@ const Hero = () => {
         Pengen jadi programmer, namun enggan ngoding.
       </p>
       <Button className="mt-4 py-2.5 px-4.5">
-        <Link to="/projects" className="text-2xl md:text-sm">Liat Project gue</Link>
+        <Link to="/projects" className="text-xl md:text-sm">Liat Project gue</Link>
       </Button>
 
     </div>

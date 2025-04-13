@@ -96,7 +96,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-1/4">
+    <form onSubmit={handleSubmit} className="w-3/4 md:w-1/4">
       <InputForm
         type="text"
         name="Fullname"
@@ -117,7 +117,7 @@ const ContactForm = () => {
         value={form.message}
         onChange={handleChange}
       ></TextAreaForm>
-      <Button type="submit" className='w-full'>Submit sini bro</Button>
+      <Button type="submit" className='w-full text-xl py-3 px-3'>Submit sini bro</Button>
     </form>
   );
 };
