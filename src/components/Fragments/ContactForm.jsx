@@ -85,9 +85,9 @@ const ContactForm = () => {
     e.preventDefault();
     const phoneNumber = "6285156117973";
 
-    const { name, username, message } = form;
+    const { name, message } = form;
 
-    const rawMessage = `Nama: ${name}\nUsername: ${username}\nPesan: ${message}`;
+    const rawMessage = `Nama: ${name}\n Pesan: ${message}`;
     const encodedMessage = encodeURIComponent(rawMessage);
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
@@ -99,25 +99,18 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="w-3/4 md:w-1/4">
       <InputForm
         type="text"
-        name="Fullname"
-        placeholder="Pendek juga boleh.."
+        name="name"
+        placeholder="Enter your name here..."
         value={form.name}
         onChange={handleChange}
       />
-      <InputForm
-        type="text"
-        name="Instagram Username"
-        placeholder="Serah lu"
-        value={form.username}
-        onChange={handleChange}
-      />
       <TextAreaForm
-        name="Message"
-        placeholder="Kata-kata hari ini ..."
+        name="message"
+        placeholder="Leave me a message..."
         value={form.message}
         onChange={handleChange}
       ></TextAreaForm>
-      <Button type="submit" className='w-full text-xl py-3 px-3'>Submit sini bro</Button>
+      <Button type="submit" className='w-full text-sm md:text-xs py-2'>Send to WhatsApp</Button>
     </form>
   );
 };
