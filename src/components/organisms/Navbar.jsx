@@ -42,6 +42,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      
       <ul className="md:flex gap-4 text-sm hover:cursor-pointer hidden">
         <li className="hover:scale-103 transition duration-200">
           <Link to="/">Home</Link>
