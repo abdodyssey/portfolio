@@ -26,7 +26,7 @@ backgroundImage: `url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox=
         <h1 className="font-bold text-3xl md:text-2xl w-3/4">
           Muhammad Abdi
         </h1>
-        <p className="text-xl md:text-sm w-3/4">
+        <p className="text-xl md:text-sm w-3/4 md:w-full">
           Ingin menjadi programmer, namun enggan ngoding.
         </p>
         <Button className="mt-4 py-3 px-6 md:py-2 md:px-4">

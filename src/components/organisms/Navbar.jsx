@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGripLines } from "@fortawesome/free-solid-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faGripLines, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
+  
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center py-2 px-4  w-full ">
-      <h1 className="text-xl font-bold hover:scale-103 transition duration-200 rounded-full px-3 py-1.5">
+    <nav className="flex justify-between items-center py-2 px-4 w-full">
+      <h1 className="text-xl  font-bold hover:scale-103 transition duration-200 rounded-full px-3 py-1.5">
         <Link to="/">abd.ezpz</Link>
       </h1>
-      <div className="md:hidden text-3xl" onClick={() => setIsOpen(true)}>
+      <div className="md:hidden text-2xl" onClick={() => setIsOpen(true)}>
         <FontAwesomeIcon icon={faGripLines} />
       </div>
       {isOpen && (
@@ -21,12 +21,13 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           } `}
         >
-          <div onClick={() => setIsOpen(false)} className="text-3xl absolute right-0 px-4 py-2">
-            <FontAwesomeIcon
-              icon={faXmark}
-            />
+          <div
+            onClick={() => setIsOpen(false)}
+            className="text-2xl absolute right-0 px-4 py-2"
+          >
+            <FontAwesomeIcon icon={faXmark} />
           </div>
-          <ul className="text-xl flex flex-col p-4 gap-4 top-9 absolute w-full">
+          <ul className="text-sm flex flex-col p-4 gap-4 top-9 absolute w-full">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -43,7 +44,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <ul className="md:flex gap-4 text-sm rounded-full hover:cursor-pointer hidden bg-neutral-100 px-5 py-2">
+      <ul className="md:flex gap-4 text-sm md:text-xs rounded-full hover:cursor-pointer hidden bg-neutral-100 px-5 py-2">
         <li className="hover:scale-103 transition duration-200">
           <Link to="/">Home</Link>
         </li>
